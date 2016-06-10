@@ -2501,7 +2501,6 @@ if get(handles.ConfigureSourceBox,'Value') == 0
         set(handles.Source2ConnButton,'CData',imread('NoConn.png'));
     else
         assignin('base','Source2MatchPending',1); 
-        set(handles.Source2ConnButton,'CData',imread('MatchPending.png'));
     end
     OccupancyCheck(handles);
 end
@@ -2592,7 +2591,8 @@ for i = 1:6
         case 5
             Bus5Occupied = 1;
         otherwise
-                        
+            'judy is a runt'
+            
     end
 end
 
