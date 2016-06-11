@@ -22,7 +22,7 @@ function varargout = GUIv2(varargin)
 
 % Edit the above text to modify the response to help GUIv2
 
-% Last Modified by GUIDE v2.5 10-Jun-2016 01:02:57
+% Last Modified by GUIDE v2.5 11-Jun-2016 04:21:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -65,6 +65,24 @@ assignin('base','Source3MatchPending',0);
 assignin('base','Source4MatchPending',0);
 assignin('base','Source5MatchPending',0);
 assignin('base','Source6MatchPending',0);
+
+assignin('base','icon1Index',0);
+assignin('base','icon2Index',0);
+assignin('base','icon3Index',0);
+assignin('base','icon4Index',0);
+assignin('base','icon5Index',0);
+assignin('base','icon6Index',0);
+iconList = {'NC.png',
+    'SourceA.png',
+    'SourceB.png',
+    'DischargeA.png',
+    'ChargeA.png',
+    'DischargeB.png',
+    'ChargeB.png',
+    'SourceC.png',
+    'SourceD.png'};
+assignin('base','iconList',iconList);
+
 
 
 % UIWAIT makes GUIv2 wait for user response (see UIRESUME)
@@ -2501,6 +2519,7 @@ if get(handles.ConfigureSourceBox,'Value') == 0
         set(handles.Source2ConnButton,'CData',imread('NoConn.png'));
     else
         assignin('base','Source2MatchPending',1); 
+        set(handles.Source2ConnButton,'CData',imread('MatchPending.png'));
     end
     OccupancyCheck(handles);
 end
@@ -2591,8 +2610,7 @@ for i = 1:6
         case 5
             Bus5Occupied = 1;
         otherwise
-            'judy is a runt'
-            
+                        
     end
 end
 
@@ -2613,3 +2631,211 @@ if Bus5Occupied == 0
     set(handles.Bus5ConnButton,'CData',imread('Bus5ConnEmpty.png'));
 end
 
+
+% --- Executes on button press in Source1IconButton.
+function Source1IconButton_Callback(hObject, eventdata, handles)
+if get(handles.LockSourceIconBox,'Value') == 0
+    index = evalin('base','icon1Index');
+    index = index + 1;
+    if index > evalin('base','length(iconList)')
+        index = 1;
+    end
+    name = evalin('base',sprintf('iconList{%d}',index));
+    set(handles.Source1IconButton,'Cdata',imread(name));
+    assignin('base','icon1Index',index);
+else
+    'Icons Locked!'
+end
+
+% --- Executes on button press in Source2IconButton.
+function Source2IconButton_Callback(hObject, eventdata, handles)
+if get(handles.LockSourceIconBox,'Value') == 0
+    index = evalin('base','icon2Index');
+    index = index + 1;
+    if index > evalin('base','length(iconList)')
+        index = 1;
+    end
+    name = evalin('base',sprintf('iconList{%d}',index));
+    set(handles.Source2IconButton,'Cdata',imread(name));
+    assignin('base','icon2Index',index);
+else
+    'Icons Locked!'
+end
+
+
+% --- Executes on button press in Source3IconButton.
+function Source3IconButton_Callback(hObject, eventdata, handles)
+if get(handles.LockSourceIconBox,'Value') == 0
+    index = evalin('base','icon3Index');
+    index = index + 1;
+    if index > evalin('base','length(iconList)')
+        index = 1;
+    end
+    name = evalin('base',sprintf('iconList{%d}',index));
+    set(handles.Source3IconButton,'Cdata',imread(name));
+    assignin('base','icon3Index',index);
+else 
+    'Icons Locked!'
+end
+
+% --- Executes on button press in Source4IconButton.
+function Source4IconButton_Callback(hObject, eventdata, handles)
+if get(handles.LockSourceIconBox,'Value') == 0
+    index = evalin('base','icon4Index');
+    index = index + 1;
+    if index > evalin('base','length(iconList)')
+        index = 1;
+    end
+    name = evalin('base',sprintf('iconList{%d}',index));
+    set(handles.Source4IconButton,'Cdata',imread(name));
+    assignin('base','icon4Index',index);
+else
+    'Icons Locked!'
+end
+
+% --- Executes on button press in Source5IconButton.
+function Source5IconButton_Callback(hObject, eventdata, handles)
+if get(handles.LockSourceIconBox,'Value') == 0
+    index = evalin('base','icon5Index');
+    index = index + 1;
+    if index > evalin('base','length(iconList)')
+        index = 1;
+    end
+    name = evalin('base',sprintf('iconList{%d}',index));
+    set(handles.Source5IconButton,'Cdata',imread(name));
+    assignin('base','icon5Index',index);
+else
+    'Icons Locked!'
+end
+
+% --- Executes on button press in Source6IconButton.
+function Source6IconButton_Callback(hObject, eventdata, handles)
+if get(handles.LockSourceIconBox,'Value') == 0
+    index = evalin('base','icon6Index');
+    index = index + 1;
+    if index > evalin('base','length(iconList)')
+        index = 1;
+    end
+    name = evalin('base',sprintf('iconList{%d}',index));
+    set(handles.Source6IconButton,'Cdata',imread(name));
+    assignin('base','icon6Index',index);
+else
+    'Icons Locked!'
+end
+
+% --- Executes on button press in LockSourceIconBox.
+function LockSourceIconBox_Callback(hObject, eventdata, handles)
+% hObject    handle to LockSourceIconBox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of LockSourceIconBox
+
+
+% --- Executes on button press in LockLocations.
+function LockLocations_Callback(hObject, eventdata, handles)
+% hObject    handle to LockLocations (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of LockLocations
+
+
+% --- Executes on button press in Bus1FaultButton.
+function Bus1FaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Bus2FaultButton.
+function Bus2FaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Tie1AFault.
+function Tie1AFault_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Bus4FaultButton.
+function Bus4FaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Bus3FaultButton.
+function Bus3FaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Tie1BFault.
+function Tie1BFault_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Bus5FaultButton.
+function Bus5FaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Tie2AFaultButton.
+function Tie2AFaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in Tie2BFaultButton.
+function Tie2BFaultButton_Callback(hObject, eventdata, handles)
+%blockname = [modelname ];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    %set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    %set_param(blockname,'Value','0');
+end
