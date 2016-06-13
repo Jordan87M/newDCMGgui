@@ -22,7 +22,7 @@ function varargout = GUIv2(varargin)
 
 % Edit the above text to modify the response to help GUIv2
 
-% Last Modified by GUIDE v2.5 11-Jun-2016 04:21:45
+% Last Modified by GUIDE v2.5 13-Jun-2016 05:59:41
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -59,6 +59,9 @@ handles.output = hObject;
 guidata(hObject, handles);
 
 'initializing workspace variables'
+assignin('base','modelname','DCMG_SG');
+assignin('base','subname','HMI_out');
+
 assignin('base','Source1MatchPending',0);
 assignin('base','Source2MatchPending',0);
 assignin('base','Source3MatchPending',0);
@@ -108,18 +111,18 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 
 
 
-function BR1B1edit_Callback(hObject, eventdata, handles)
-% hObject    handle to BR1B1edit (see GCBO)
+function BR2B1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of BR1B1edit as text
-%        str2double(get(hObject,'String')) returns contents of BR1B1edit as a double
+% Hints: get(hObject,'String') returns contents of BR2B1_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function BR1B1edit_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to BR1B1edit (see GCBO)
+function BR2B1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -131,18 +134,18 @@ end
 
 
 
-function BR2B1edit_Callback(hObject, eventdata, handles)
-% hObject    handle to BR2B1edit (see GCBO)
+function BR1B1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of BR2B1edit as text
-%        str2double(get(hObject,'String')) returns contents of BR2B1edit as a double
+% Hints: get(hObject,'String') returns contents of BR1B1_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function BR2B1edit_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to BR2B1edit (see GCBO)
+function BR1B1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -154,18 +157,18 @@ end
 
 
 
-function BR1B2edit_Callback(hObject, eventdata, handles)
-% hObject    handle to BR1B2edit (see GCBO)
+function BR2B2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of BR1B2edit as text
-%        str2double(get(hObject,'String')) returns contents of BR1B2edit as a double
+% Hints: get(hObject,'String') returns contents of BR2B2_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function BR1B2edit_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to BR1B2edit (see GCBO)
+function BR2B2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -177,18 +180,18 @@ end
 
 
 
-function BR2B2edit_Callback(hObject, eventdata, handles)
-% hObject    handle to BR2B2edit (see GCBO)
+function BR1B2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of BR2B2edit as text
-%        str2double(get(hObject,'String')) returns contents of BR2B2edit as a double
+% Hints: get(hObject,'String') returns contents of BR1B2_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function BR2B2edit_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to BR2B2edit (see GCBO)
+function BR1B2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -200,18 +203,18 @@ end
 
 
 
-function edit6_Callback(hObject, eventdata, handles)
-% hObject    handle to edit6 (see GCBO)
+function TIE1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to TIE1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit6 as text
-%        str2double(get(hObject,'String')) returns contents of edit6 as a double
+% Hints: get(hObject,'String') returns contents of TIE1_Current as text
+%        str2double(get(hObject,'String')) returns contents of TIE1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit6_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit6 (see GCBO)
+function TIE1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to TIE1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -223,18 +226,18 @@ end
 
 
 
-function TIE2edit_Callback(hObject, eventdata, handles)
-% hObject    handle to TIE2edit (see GCBO)
+function TIE2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to TIE2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of TIE2edit as text
-%        str2double(get(hObject,'String')) returns contents of TIE2edit as a double
+% Hints: get(hObject,'String') returns contents of TIE2_Current as text
+%        str2double(get(hObject,'String')) returns contents of TIE2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function TIE2edit_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to TIE2edit (see GCBO)
+function TIE2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to TIE2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -798,18 +801,18 @@ end
 
 
 
-function edit34_Callback(hObject, eventdata, handles)
-% hObject    handle to edit34 (see GCBO)
+function BR2B1_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit34 as text
-%        str2double(get(hObject,'String')) returns contents of edit34 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit34_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit34 (see GCBO)
+function BR2B1_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -821,18 +824,18 @@ end
 
 
 
-function edit35_Callback(hObject, eventdata, handles)
-% hObject    handle to edit35 (see GCBO)
+function BR1B1_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit35 as text
-%        str2double(get(hObject,'String')) returns contents of edit35 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit35_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit35 (see GCBO)
+function BR1B1_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -844,18 +847,18 @@ end
 
 
 
-function edit36_Callback(hObject, eventdata, handles)
-% hObject    handle to edit36 (see GCBO)
+function BR1B2_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit36 as text
-%        str2double(get(hObject,'String')) returns contents of edit36 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit36_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit36 (see GCBO)
+function BR1B2_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -867,18 +870,18 @@ end
 
 
 
-function edit37_Callback(hObject, eventdata, handles)
-% hObject    handle to edit37 (see GCBO)
+function BR2B2_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit37 as text
-%        str2double(get(hObject,'String')) returns contents of edit37 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit37_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit37 (see GCBO)
+function BR2B2_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1580,18 +1583,18 @@ end
 
 
 
-function edit68_Callback(hObject, eventdata, handles)
-% hObject    handle to edit68 (see GCBO)
+function Main_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to Main_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit68 as text
-%        str2double(get(hObject,'String')) returns contents of edit68 as a double
+% Hints: get(hObject,'String') returns contents of Main_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of Main_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit68_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit68 (see GCBO)
+function Main_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to Main_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1616,11 +1619,35 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton4.
-function pushbutton4_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton4 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B1PROX_SG_NO.
+function BR2B1PROX_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1PROX_SG_NO'];
+if get(hObject,'Value') == 1
+    try
+        g
+else
+    
+end
+
+try
+    if get(hObject,'Value') == 1
+        set_param(blockname,'Value','1');
+        set(hObject,'CData',imread('NOclosed.png'));
+        'here'
+    else
+        set_param(blockname,'Value','0');
+        set(hObject,'CData',imread('NOopen.png'));
+        'no, here'
+    end
+catch err
+    if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName');
+        'maybe the model isn''t open'
+        get(hObject,'Value')
+    else
+        'panic'
+    end
+end
+
 
 
 % --- Executes on button press in pushbutton5.
@@ -1637,12 +1664,16 @@ function pushbutton6_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton7.
-function pushbutton7_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton7 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B1DIST_SG_NO.
+function BR2B1DIST_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1DIST_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton8.
 function pushbutton8_Callback(hObject, eventdata, handles)
@@ -1658,12 +1689,16 @@ function pushbutton9_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton10.
-function pushbutton10_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton10 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B2PROX_SG_NO.
+function BR2B2PROX_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2PROX_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton11.
 function pushbutton11_Callback(hObject, eventdata, handles)
@@ -1679,12 +1714,16 @@ function pushbutton12_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton13.
-function pushbutton13_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton13 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B2DIST_SG_NO.
+function BR2B2DIST_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2DIST_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton14.
 function pushbutton14_Callback(hObject, eventdata, handles)
@@ -1700,12 +1739,16 @@ function pushbutton15_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton16.
-function pushbutton16_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton16 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in TIE1_SG_NO.
+function TIE1_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/TIE1_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton17.
 function pushbutton17_Callback(hObject, eventdata, handles)
@@ -1721,12 +1764,16 @@ function pushbutton18_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton19.
-function pushbutton19_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton19 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in TIE2_SG_NO.
+function TIE2_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/TIE2_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton23.
 function pushbutton23_Callback(hObject, eventdata, handles)
@@ -1742,12 +1789,16 @@ function pushbutton24_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton25.
-function pushbutton25_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton25 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B1PROX_SG_NO.
+function BR1B1PROX_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1PROX_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton26.
 function pushbutton26_Callback(hObject, eventdata, handles)
@@ -1763,12 +1814,16 @@ function pushbutton27_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton28.
-function pushbutton28_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton28 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B1DIST_SG_NO.
+function BR1B1DIST_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1DIST_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton29.
 function pushbutton29_Callback(hObject, eventdata, handles)
@@ -1784,12 +1839,16 @@ function pushbutton30_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton31.
-function pushbutton31_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton31 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B2PROX_SG_NO.
+function BR1B2PROX_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2PROX_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton32.
 function pushbutton32_Callback(hObject, eventdata, handles)
@@ -1805,12 +1864,16 @@ function pushbutton33_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton34.
-function pushbutton34_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton34 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B2DIST_SG_NO.
+function BR1B2DIST_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2DIST_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton35.
 function pushbutton35_Callback(hObject, eventdata, handles)
@@ -1826,12 +1889,16 @@ function pushbutton36_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton37.
-function pushbutton37_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton37 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B1L1_SG_NO.
+function BR2B1L1_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L1_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton38.
 function pushbutton38_Callback(hObject, eventdata, handles)
@@ -1847,12 +1914,16 @@ function pushbutton39_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton40.
-function pushbutton40_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton40 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B1L2_SG_NO.
+function BR2B1L2_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L2_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton41.
 function pushbutton41_Callback(hObject, eventdata, handles)
@@ -1868,12 +1939,16 @@ function pushbutton42_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton43.
-function pushbutton43_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton43 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B1L3_SG_NO.
+function BR2B1L3_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L3_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton44.
 function pushbutton44_Callback(hObject, eventdata, handles)
@@ -1889,12 +1964,16 @@ function pushbutton45_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton46.
-function pushbutton46_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton46 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B2L1_SG_NO.
+function BR2B2L1_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L1_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton47.
 function pushbutton47_Callback(hObject, eventdata, handles)
@@ -1910,12 +1989,16 @@ function pushbutton48_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton49.
-function pushbutton49_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton49 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B2L2_SG_NO.
+function BR2B2L2_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L2_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton50.
 function pushbutton50_Callback(hObject, eventdata, handles)
@@ -1931,12 +2014,16 @@ function pushbutton51_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton52.
-function pushbutton52_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton52 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B2L3_SG_NO.
+function BR2B2L3_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L3_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton53.
 function pushbutton53_Callback(hObject, eventdata, handles)
@@ -1952,12 +2039,16 @@ function pushbutton54_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton55.
-function pushbutton55_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton55 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B1L1_SG_NO.
+function BR1B1L1_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L1_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton56.
 function pushbutton56_Callback(hObject, eventdata, handles)
@@ -1973,12 +2064,16 @@ function pushbutton57_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton58.
-function pushbutton58_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton58 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B1L2_SG_NO.
+function BR1B1L2_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L2_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton59.
 function pushbutton59_Callback(hObject, eventdata, handles)
@@ -1994,12 +2089,16 @@ function pushbutton60_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton61.
-function pushbutton61_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton61 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B1L3_SG_NO.
+function BR1B1L3_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L3_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton62.
 function pushbutton62_Callback(hObject, eventdata, handles)
@@ -2015,12 +2114,16 @@ function pushbutton63_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton64.
-function pushbutton64_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton64 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B2L1_SG_NO.
+function BR1B2L1_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L1_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton65.
 function pushbutton65_Callback(hObject, eventdata, handles)
@@ -2036,12 +2139,16 @@ function pushbutton66_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton67.
-function pushbutton67_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton67 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B2L2_SG_NO.
+function BR1B2L2_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L2_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton68.
 function pushbutton68_Callback(hObject, eventdata, handles)
@@ -2057,12 +2164,16 @@ function pushbutton69_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton70.
-function pushbutton70_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton70 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR1B2L3_SG_NO.
+function BR1B2L3_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L3_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton71.
 function pushbutton71_Callback(hObject, eventdata, handles)
@@ -2078,12 +2189,16 @@ function pushbutton72_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton73.
-function pushbutton73_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton73 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in SRC1_SG_NO.
+function SRC1_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC1_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton74.
 function pushbutton74_Callback(hObject, eventdata, handles)
@@ -2099,12 +2214,16 @@ function pushbutton75_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton76.
-function pushbutton76_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton76 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in SRC2_SG_NO.
+function SRC2_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC2_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton77.
 function pushbutton77_Callback(hObject, eventdata, handles)
@@ -2120,12 +2239,16 @@ function pushbutton78_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton79.
-function pushbutton79_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton79 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in SRC3_SG_NO.
+function SRC3_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC3_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton80.
 function pushbutton80_Callback(hObject, eventdata, handles)
@@ -2141,12 +2264,16 @@ function pushbutton81_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton82.
-function pushbutton82_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton82 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in SRC4_SG_NO.
+function SRC4_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC4_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton83.
 function pushbutton83_Callback(hObject, eventdata, handles)
@@ -2162,12 +2289,16 @@ function pushbutton84_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton85.
-function pushbutton85_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton85 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in SRC5_SG_NO.
+function SRC5_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC5_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton86.
 function pushbutton86_Callback(hObject, eventdata, handles)
@@ -2183,12 +2314,16 @@ function pushbutton87_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton88.
-function pushbutton88_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton88 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in SRC6_SG_NO.
+function SRC6_SG_NO_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC6_SG_NO'];
+if get(hObject,'Value') == 1
+    set_param(blockname,'Value','1');
+    set_param(hObject,'CData',imread('NOclosed.png'));
+else
+    set_param(blockname,'Value','0');
+    set_param(hObject,'CData',imread('NOopen.png'));
+end
 
 % --- Executes on button press in pushbutton89.
 function pushbutton89_Callback(hObject, eventdata, handles)
@@ -2725,117 +2860,115 @@ end
 
 % --- Executes on button press in LockSourceIconBox.
 function LockSourceIconBox_Callback(hObject, eventdata, handles)
-% hObject    handle to LockSourceIconBox (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hint: get(hObject,'Value') returns toggle state of LockSourceIconBox
-
+if get(hObject,'Value') == 1
+    assignin('base','IconsLocked',1);
+else
+    assignin('base','IconsLocked',0);
+end
 
 % --- Executes on button press in LockLocations.
 function LockLocations_Callback(hObject, eventdata, handles)
-% hObject    handle to LockLocations (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hint: get(hObject,'Value') returns toggle state of LockLocations
-
-
-% --- Executes on button press in Bus1FaultButton.
-function Bus1FaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
 if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    assignin('base','LocationsLocked',1);
 else
-    set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    assignin('base','LocationsLocked',0);
 end
 
-% --- Executes on button press in Bus2FaultButton.
-function Bus2FaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in MainFault.
+function MainFault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/Main_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Tie1AFault.
-function Tie1AFault_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR2B1_Fault.
+function BR2B1_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Bus4FaultButton.
-function Bus4FaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR2TIE1_Fault.
+function BR2TIE1_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2TIE1_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Bus3FaultButton.
-function Bus3FaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR2B2_Fault.
+function BR2B2_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Tie1BFault.
-function Tie1BFault_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR1B1_Fault.
+function BR1B1_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Bus5FaultButton.
-function Bus5FaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR1TIE1_Fault.
+function BR1TIE1_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1TIE1_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Tie2AFaultButton.
-function Tie2AFaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR1B2_Fault.
+function BR1B2_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
 end
 
-% --- Executes on button press in Tie2BFaultButton.
-function Tie2BFaultButton_Callback(hObject, eventdata, handles)
-%blockname = [modelname ];
+% --- Executes on button press in BR2TIE2_Fault.
+function BR2TIE2_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2TIE2_Fault'];
 if get(hObject,'Value') == 1
     set(hObject,'CData',imread('Fault.png'));
-    %set_param(blockname,'Value','1');
+    set_param(blockname,'Value','1');
 else
     set(hObject,'CData',imread('NoFault.png'));
-    %set_param(blockname,'Value','0');
+    set_param(blockname,'Value','0');
+end
+
+% --- Executes on button press in BR1TIE2_Fault.
+function BR1TIE2_Fault_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1TIE2_Fault'];
+if get(hObject,'Value') == 1
+    set(hObject,'CData',imread('Fault.png'));
+    set_param(blockname,'Value','1');
+else
+    set(hObject,'CData',imread('NoFault.png'));
+    set_param(blockname,'Value','0');
 end
