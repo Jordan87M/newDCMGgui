@@ -22,7 +22,7 @@ function varargout = GUIv2(varargin)
 
 % Edit the above text to modify the response to help GUIv2
 
-% Last Modified by GUIDE v2.5 13-Jun-2016 05:59:41
+% Last Modified by GUIDE v2.5 15-Jun-2016 20:12:55
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -56,7 +56,8 @@ function GUIv2_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 
 % Update handles structure
-guidata(hObject, handles);
+h = guidata(hObject, handles);
+assignin('base','GUIhandles',h);
 
 'initializing workspace variables'
 assignin('base','modelname','DCMG_SG');
@@ -249,18 +250,18 @@ end
 
 
 
-function edit9_Callback(hObject, eventdata, handles)
-% hObject    handle to edit9 (see GCBO)
+function BR2B1L1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit9 as text
-%        str2double(get(hObject,'String')) returns contents of edit9 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1L1_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1L1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit9_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit9 (see GCBO)
+function BR2B1L1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -272,18 +273,18 @@ end
 
 
 
-function edit10_Callback(hObject, eventdata, handles)
-% hObject    handle to edit10 (see GCBO)
+function BR2B1L1_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit10 as text
-%        str2double(get(hObject,'String')) returns contents of edit10 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1L1_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1L1_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit10_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit10 (see GCBO)
+function BR2B1L1_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -295,18 +296,18 @@ end
 
 
 
-function edit11_Callback(hObject, eventdata, handles)
-% hObject    handle to edit11 (see GCBO)
+function BR2B1L2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit11 as text
-%        str2double(get(hObject,'String')) returns contents of edit11 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1L2_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1L2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit11_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit11 (see GCBO)
+function BR2B1L2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -318,18 +319,18 @@ end
 
 
 
-function edit12_Callback(hObject, eventdata, handles)
-% hObject    handle to edit12 (see GCBO)
+function BR2B1L2_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit12 as text
-%        str2double(get(hObject,'String')) returns contents of edit12 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1L2_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1L2_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit12_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit12 (see GCBO)
+function BR2B1L2_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -341,18 +342,18 @@ end
 
 
 
-function edit13_Callback(hObject, eventdata, handles)
-% hObject    handle to edit13 (see GCBO)
+function BR2B1L3_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit13 as text
-%        str2double(get(hObject,'String')) returns contents of edit13 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1L3_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1L3_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit13_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit13 (see GCBO)
+function BR2B1L3_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -364,18 +365,18 @@ end
 
 
 
-function edit14_Callback(hObject, eventdata, handles)
-% hObject    handle to edit14 (see GCBO)
+function BR2B1L3_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit14 as text
-%        str2double(get(hObject,'String')) returns contents of edit14 as a double
+% Hints: get(hObject,'String') returns contents of BR2B1L3_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR2B1L3_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit14_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit14 (see GCBO)
+function BR2B1L3_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B1L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -387,18 +388,18 @@ end
 
 
 
-function edit15_Callback(hObject, eventdata, handles)
-% hObject    handle to edit15 (see GCBO)
+function BR2B2L1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit15 as text
-%        str2double(get(hObject,'String')) returns contents of edit15 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2L1_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2L1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit15_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit15 (see GCBO)
+function BR2B2L1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -410,18 +411,18 @@ end
 
 
 
-function edit16_Callback(hObject, eventdata, handles)
-% hObject    handle to edit16 (see GCBO)
+function BR2B2L1_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit16 as text
-%        str2double(get(hObject,'String')) returns contents of edit16 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2L1_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2L1_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit16_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit16 (see GCBO)
+function BR2B2L1_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -433,18 +434,18 @@ end
 
 
 
-function edit17_Callback(hObject, eventdata, handles)
-% hObject    handle to edit17 (see GCBO)
+function BR2B2L2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit17 as text
-%        str2double(get(hObject,'String')) returns contents of edit17 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2L2_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2L2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit17_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit17 (see GCBO)
+function BR2B2L2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -456,18 +457,18 @@ end
 
 
 
-function edit18_Callback(hObject, eventdata, handles)
-% hObject    handle to edit18 (see GCBO)
+function BR2B2L2_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit18 as text
-%        str2double(get(hObject,'String')) returns contents of edit18 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2L2_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2L2_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit18_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit18 (see GCBO)
+function BR2B2L2_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -479,18 +480,18 @@ end
 
 
 
-function edit19_Callback(hObject, eventdata, handles)
-% hObject    handle to edit19 (see GCBO)
+function BR2B2L3_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit19 as text
-%        str2double(get(hObject,'String')) returns contents of edit19 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2L3_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2L3_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit19_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit19 (see GCBO)
+function BR2B2L3_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -502,18 +503,18 @@ end
 
 
 
-function edit20_Callback(hObject, eventdata, handles)
-% hObject    handle to edit20 (see GCBO)
+function BR2B2L3_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit20 as text
-%        str2double(get(hObject,'String')) returns contents of edit20 as a double
+% Hints: get(hObject,'String') returns contents of BR2B2L3_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR2B2L3_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit20_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit20 (see GCBO)
+function BR2B2L3_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -525,18 +526,18 @@ end
 
 
 
-function edit21_Callback(hObject, eventdata, handles)
-% hObject    handle to edit21 (see GCBO)
+function BR1B1L1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit21 as text
-%        str2double(get(hObject,'String')) returns contents of edit21 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1L1_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1L1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit21_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit21 (see GCBO)
+function BR1B1L1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -548,18 +549,18 @@ end
 
 
 
-function edit22_Callback(hObject, eventdata, handles)
-% hObject    handle to edit22 (see GCBO)
+function BR1B1L1_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit22 as text
-%        str2double(get(hObject,'String')) returns contents of edit22 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1L1_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1L1_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit22_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit22 (see GCBO)
+function BR1B1L1_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -571,18 +572,18 @@ end
 
 
 
-function edit23_Callback(hObject, eventdata, handles)
-% hObject    handle to edit23 (see GCBO)
+function BR1B1L2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit23 as text
-%        str2double(get(hObject,'String')) returns contents of edit23 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1L2_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1L2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit23_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit23 (see GCBO)
+function BR1B1L2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -594,18 +595,18 @@ end
 
 
 
-function edit24_Callback(hObject, eventdata, handles)
-% hObject    handle to edit24 (see GCBO)
+function BR1B1L2_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit24 as text
-%        str2double(get(hObject,'String')) returns contents of edit24 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1L2_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1L2_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit24_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit24 (see GCBO)
+function BR1B1L2_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -617,18 +618,18 @@ end
 
 
 
-function edit25_Callback(hObject, eventdata, handles)
-% hObject    handle to edit25 (see GCBO)
+function BR1B1L3_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit25 as text
-%        str2double(get(hObject,'String')) returns contents of edit25 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1L3_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1L3_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit25_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit25 (see GCBO)
+function BR1B1L3_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -640,18 +641,18 @@ end
 
 
 
-function edit26_Callback(hObject, eventdata, handles)
-% hObject    handle to edit26 (see GCBO)
+function BR1B1L3_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit26 as text
-%        str2double(get(hObject,'String')) returns contents of edit26 as a double
+% Hints: get(hObject,'String') returns contents of BR1B1L3_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR1B1L3_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit26_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit26 (see GCBO)
+function BR1B1L3_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B1L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -663,18 +664,18 @@ end
 
 
 
-function edit27_Callback(hObject, eventdata, handles)
-% hObject    handle to edit27 (see GCBO)
+function BR1B2L1_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit27 as text
-%        str2double(get(hObject,'String')) returns contents of edit27 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2L1_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2L1_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit27_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit27 (see GCBO)
+function BR1B2L1_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2L1_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -686,18 +687,18 @@ end
 
 
 
-function edit28_Callback(hObject, eventdata, handles)
-% hObject    handle to edit28 (see GCBO)
+function BR1B2L1_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit28 as text
-%        str2double(get(hObject,'String')) returns contents of edit28 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2L1_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2L1_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit28_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit28 (see GCBO)
+function BR1B2L1_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2L1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -709,18 +710,18 @@ end
 
 
 
-function edit29_Callback(hObject, eventdata, handles)
-% hObject    handle to edit29 (see GCBO)
+function BR1B2L2_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit29 as text
-%        str2double(get(hObject,'String')) returns contents of edit29 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2L2_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2L2_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit29_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit29 (see GCBO)
+function BR1B2L2_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2L2_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -732,18 +733,18 @@ end
 
 
 
-function edit30_Callback(hObject, eventdata, handles)
-% hObject    handle to edit30 (see GCBO)
+function BR1B2L2_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit30 as text
-%        str2double(get(hObject,'String')) returns contents of edit30 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2L2_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2L2_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit30_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit30 (see GCBO)
+function BR1B2L2_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2L2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -755,18 +756,18 @@ end
 
 
 
-function edit31_Callback(hObject, eventdata, handles)
-% hObject    handle to edit31 (see GCBO)
+function BR1B2L3_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit31 as text
-%        str2double(get(hObject,'String')) returns contents of edit31 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2L3_Current as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2L3_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit31_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit31 (see GCBO)
+function BR1B2L3_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2L3_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -778,18 +779,18 @@ end
 
 
 
-function edit32_Callback(hObject, eventdata, handles)
-% hObject    handle to edit32 (see GCBO)
+function BR1B2L3_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit32 as text
-%        str2double(get(hObject,'String')) returns contents of edit32 as a double
+% Hints: get(hObject,'String') returns contents of BR1B2L3_Power as text
+%        str2double(get(hObject,'String')) returns contents of BR1B2L3_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit32_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit32 (see GCBO)
+function BR1B2L3_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to BR1B2L3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -893,18 +894,18 @@ end
 
 
 
-function edit38_Callback(hObject, eventdata, handles)
-% hObject    handle to edit38 (see GCBO)
+function SRC1Unreg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit38 as text
-%        str2double(get(hObject,'String')) returns contents of edit38 as a double
+% Hints: get(hObject,'String') returns contents of SRC1Unreg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC1Unreg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit38_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit38 (see GCBO)
+function SRC1Unreg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC1Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -916,18 +917,18 @@ end
 
 
 
-function edit39_Callback(hObject, eventdata, handles)
-% hObject    handle to edit39 (see GCBO)
+function SRC1Unreg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit39 as text
-%        str2double(get(hObject,'String')) returns contents of edit39 as a double
+% Hints: get(hObject,'String') returns contents of SRC1Unreg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC1Unreg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit39_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit39 (see GCBO)
+function SRC1Unreg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC1Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -939,18 +940,18 @@ end
 
 
 
-function edit40_Callback(hObject, eventdata, handles)
-% hObject    handle to edit40 (see GCBO)
+function SRC1Reg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit40 as text
-%        str2double(get(hObject,'String')) returns contents of edit40 as a double
+% Hints: get(hObject,'String') returns contents of SRC1Reg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC1Reg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit40_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit40 (see GCBO)
+function SRC1Reg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC1Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -962,18 +963,18 @@ end
 
 
 
-function edit41_Callback(hObject, eventdata, handles)
-% hObject    handle to edit41 (see GCBO)
+function SRC1Reg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit41 as text
-%        str2double(get(hObject,'String')) returns contents of edit41 as a double
+% Hints: get(hObject,'String') returns contents of SRC1Reg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC1Reg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit41_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit41 (see GCBO)
+function SRC1Reg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC1Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -985,18 +986,18 @@ end
 
 
 
-function edit42_Callback(hObject, eventdata, handles)
-% hObject    handle to edit42 (see GCBO)
+function SRC2Unreg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit42 as text
-%        str2double(get(hObject,'String')) returns contents of edit42 as a double
+% Hints: get(hObject,'String') returns contents of SRC2Unreg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC2Unreg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit42_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit42 (see GCBO)
+function SRC2Unreg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC2Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1008,18 +1009,18 @@ end
 
 
 
-function edit43_Callback(hObject, eventdata, handles)
-% hObject    handle to edit43 (see GCBO)
+function SRC2Unreg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit43 as text
-%        str2double(get(hObject,'String')) returns contents of edit43 as a double
+% Hints: get(hObject,'String') returns contents of SRC2Unreg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC2Unreg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit43_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit43 (see GCBO)
+function SRC2Unreg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC2Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1031,18 +1032,18 @@ end
 
 
 
-function edit44_Callback(hObject, eventdata, handles)
-% hObject    handle to edit44 (see GCBO)
+function SRC2Reg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit44 as text
-%        str2double(get(hObject,'String')) returns contents of edit44 as a double
+% Hints: get(hObject,'String') returns contents of SRC2Reg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC2Reg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit44_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit44 (see GCBO)
+function SRC2Reg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC2Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1054,18 +1055,18 @@ end
 
 
 
-function edit45_Callback(hObject, eventdata, handles)
-% hObject    handle to edit45 (see GCBO)
+function SRC2Reg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit45 as text
-%        str2double(get(hObject,'String')) returns contents of edit45 as a double
+% Hints: get(hObject,'String') returns contents of SRC2Reg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC2Reg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit45_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit45 (see GCBO)
+function SRC2Reg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC2Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1077,18 +1078,18 @@ end
 
 
 
-function edit46_Callback(hObject, eventdata, handles)
-% hObject    handle to edit46 (see GCBO)
+function SRC3Unreg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit46 as text
-%        str2double(get(hObject,'String')) returns contents of edit46 as a double
+% Hints: get(hObject,'String') returns contents of SRC3Unreg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC3Unreg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit46_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit46 (see GCBO)
+function SRC3Unreg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC3Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1100,18 +1101,18 @@ end
 
 
 
-function edit47_Callback(hObject, eventdata, handles)
-% hObject    handle to edit47 (see GCBO)
+function SRC3Unreg_voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3Unreg_voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit47 as text
-%        str2double(get(hObject,'String')) returns contents of edit47 as a double
+% Hints: get(hObject,'String') returns contents of SRC3Unreg_voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC3Unreg_voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit47_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit47 (see GCBO)
+function SRC3Unreg_voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC3Unreg_voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1123,18 +1124,18 @@ end
 
 
 
-function edit48_Callback(hObject, eventdata, handles)
-% hObject    handle to edit48 (see GCBO)
+function SRC3Reg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit48 as text
-%        str2double(get(hObject,'String')) returns contents of edit48 as a double
+% Hints: get(hObject,'String') returns contents of SRC3Reg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC3Reg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit48_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit48 (see GCBO)
+function SRC3Reg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC3Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1146,18 +1147,18 @@ end
 
 
 
-function edit49_Callback(hObject, eventdata, handles)
-% hObject    handle to edit49 (see GCBO)
+function SRC3Reg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit49 as text
-%        str2double(get(hObject,'String')) returns contents of edit49 as a double
+% Hints: get(hObject,'String') returns contents of SRC3Reg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC3Reg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit49_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit49 (see GCBO)
+function SRC3Reg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC3Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1169,18 +1170,18 @@ end
 
 
 
-function edit50_Callback(hObject, eventdata, handles)
-% hObject    handle to edit50 (see GCBO)
+function SRC4Unreg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit50 as text
-%        str2double(get(hObject,'String')) returns contents of edit50 as a double
+% Hints: get(hObject,'String') returns contents of SRC4Unreg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC4Unreg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit50_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit50 (see GCBO)
+function SRC4Unreg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC4Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1192,18 +1193,18 @@ end
 
 
 
-function edit51_Callback(hObject, eventdata, handles)
-% hObject    handle to edit51 (see GCBO)
+function SRC4Unreg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit51 as text
-%        str2double(get(hObject,'String')) returns contents of edit51 as a double
+% Hints: get(hObject,'String') returns contents of SRC4Unreg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC4Unreg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit51_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit51 (see GCBO)
+function SRC4Unreg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC4Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1215,18 +1216,18 @@ end
 
 
 
-function edit52_Callback(hObject, eventdata, handles)
-% hObject    handle to edit52 (see GCBO)
+function SRC4Reg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit52 as text
-%        str2double(get(hObject,'String')) returns contents of edit52 as a double
+% Hints: get(hObject,'String') returns contents of SRC4Reg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC4Reg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit52_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit52 (see GCBO)
+function SRC4Reg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC4Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1238,18 +1239,18 @@ end
 
 
 
-function edit53_Callback(hObject, eventdata, handles)
-% hObject    handle to edit53 (see GCBO)
+function SRC4Reg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit53 as text
-%        str2double(get(hObject,'String')) returns contents of edit53 as a double
+% Hints: get(hObject,'String') returns contents of SRC4Reg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC4Reg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit53_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit53 (see GCBO)
+function SRC4Reg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC4Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1261,18 +1262,18 @@ end
 
 
 
-function edit54_Callback(hObject, eventdata, handles)
-% hObject    handle to edit54 (see GCBO)
+function SRC5Unreg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit54 as text
-%        str2double(get(hObject,'String')) returns contents of edit54 as a double
+% Hints: get(hObject,'String') returns contents of SRC5Unreg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC5Unreg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit54_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit54 (see GCBO)
+function SRC5Unreg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC5Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1284,18 +1285,18 @@ end
 
 
 
-function edit55_Callback(hObject, eventdata, handles)
-% hObject    handle to edit55 (see GCBO)
+function SRC5Unreg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit55 as text
-%        str2double(get(hObject,'String')) returns contents of edit55 as a double
+% Hints: get(hObject,'String') returns contents of SRC5Unreg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC5Unreg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit55_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit55 (see GCBO)
+function SRC5Unreg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC5Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1307,18 +1308,18 @@ end
 
 
 
-function edit56_Callback(hObject, eventdata, handles)
-% hObject    handle to edit56 (see GCBO)
+function SRC5Reg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit56 as text
-%        str2double(get(hObject,'String')) returns contents of edit56 as a double
+% Hints: get(hObject,'String') returns contents of SRC5Reg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC5Reg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit56_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit56 (see GCBO)
+function SRC5Reg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC5Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1330,18 +1331,18 @@ end
 
 
 
-function edit57_Callback(hObject, eventdata, handles)
-% hObject    handle to edit57 (see GCBO)
+function SRC5Reg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit57 as text
-%        str2double(get(hObject,'String')) returns contents of edit57 as a double
+% Hints: get(hObject,'String') returns contents of SRC5Reg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC5Reg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit57_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit57 (see GCBO)
+function SRC5Reg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC5Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1353,18 +1354,18 @@ end
 
 
 
-function edit58_Callback(hObject, eventdata, handles)
-% hObject    handle to edit58 (see GCBO)
+function SRC6Unreg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit58 as text
-%        str2double(get(hObject,'String')) returns contents of edit58 as a double
+% Hints: get(hObject,'String') returns contents of SRC6Unreg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC6Unreg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit58_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit58 (see GCBO)
+function SRC6Unreg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC6Unreg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1376,18 +1377,18 @@ end
 
 
 
-function edit59_Callback(hObject, eventdata, handles)
-% hObject    handle to edit59 (see GCBO)
+function SRC6Unreg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit59 as text
-%        str2double(get(hObject,'String')) returns contents of edit59 as a double
+% Hints: get(hObject,'String') returns contents of SRC6Unreg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC6Unreg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit59_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit59 (see GCBO)
+function SRC6Unreg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC6Unreg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1399,18 +1400,18 @@ end
 
 
 
-function edit60_Callback(hObject, eventdata, handles)
-% hObject    handle to edit60 (see GCBO)
+function SRC6Reg_Voltage_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit60 as text
-%        str2double(get(hObject,'String')) returns contents of edit60 as a double
+% Hints: get(hObject,'String') returns contents of SRC6Reg_Voltage as text
+%        str2double(get(hObject,'String')) returns contents of SRC6Reg_Voltage as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit60_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit60 (see GCBO)
+function SRC6Reg_Voltage_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC6Reg_Voltage (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1422,18 +1423,18 @@ end
 
 
 
-function edit61_Callback(hObject, eventdata, handles)
-% hObject    handle to edit61 (see GCBO)
+function SRC6Reg_Current_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit61 as text
-%        str2double(get(hObject,'String')) returns contents of edit61 as a double
+% Hints: get(hObject,'String') returns contents of SRC6Reg_Current as text
+%        str2double(get(hObject,'String')) returns contents of SRC6Reg_Current as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit61_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit61 (see GCBO)
+function SRC6Reg_Current_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC6Reg_Current (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1445,18 +1446,18 @@ end
 
 
 
-function edit62_Callback(hObject, eventdata, handles)
-% hObject    handle to edit62 (see GCBO)
+function SRC1_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit62 as text
-%        str2double(get(hObject,'String')) returns contents of edit62 as a double
+% Hints: get(hObject,'String') returns contents of SRC1_Power as text
+%        str2double(get(hObject,'String')) returns contents of SRC1_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit62_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit62 (see GCBO)
+function SRC1_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC1_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1468,18 +1469,18 @@ end
 
 
 
-function edit63_Callback(hObject, eventdata, handles)
-% hObject    handle to edit63 (see GCBO)
+function SRC2_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit63 as text
-%        str2double(get(hObject,'String')) returns contents of edit63 as a double
+% Hints: get(hObject,'String') returns contents of SRC2_Power as text
+%        str2double(get(hObject,'String')) returns contents of SRC2_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit63_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit63 (see GCBO)
+function SRC2_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC2_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1491,18 +1492,18 @@ end
 
 
 
-function edit64_Callback(hObject, eventdata, handles)
-% hObject    handle to edit64 (see GCBO)
+function SRC3_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit64 as text
-%        str2double(get(hObject,'String')) returns contents of edit64 as a double
+% Hints: get(hObject,'String') returns contents of SRC3_Power as text
+%        str2double(get(hObject,'String')) returns contents of SRC3_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit64_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit64 (see GCBO)
+function SRC3_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC3_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1514,18 +1515,18 @@ end
 
 
 
-function edit65_Callback(hObject, eventdata, handles)
-% hObject    handle to edit65 (see GCBO)
+function SRC4_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit65 as text
-%        str2double(get(hObject,'String')) returns contents of edit65 as a double
+% Hints: get(hObject,'String') returns contents of SRC4_Power as text
+%        str2double(get(hObject,'String')) returns contents of SRC4_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit65_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit65 (see GCBO)
+function SRC4_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC4_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1537,18 +1538,18 @@ end
 
 
 
-function edit66_Callback(hObject, eventdata, handles)
-% hObject    handle to edit66 (see GCBO)
+function SRC5_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit66 as text
-%        str2double(get(hObject,'String')) returns contents of edit66 as a double
+% Hints: get(hObject,'String') returns contents of SRC5_Power as text
+%        str2double(get(hObject,'String')) returns contents of SRC5_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit66_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit66 (see GCBO)
+function SRC5_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC5_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1560,18 +1561,18 @@ end
 
 
 
-function edit67_Callback(hObject, eventdata, handles)
-% hObject    handle to edit67 (see GCBO)
+function SRC6_Power_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit67 as text
-%        str2double(get(hObject,'String')) returns contents of edit67 as a double
+% Hints: get(hObject,'String') returns contents of SRC6_Power as text
+%        str2double(get(hObject,'String')) returns contents of SRC6_Power as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit67_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit67 (see GCBO)
+function SRC6_Power_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRC6_Power (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -1605,500 +1606,360 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
-% --- Executes on button press in BR1B1proxbutton.
-function BR1B1proxbutton_Callback(hObject, eventdata, handles)
-% hObject    handle to BR1B1proxbutton (see GCBO)
+% --- Executes on button press in BR2B1PROX_User.
+function BR2B1PROX_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1PROX_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton3.
-function pushbutton3_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton3 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B1PROX_SG_NC.
+function BR2B1PROX_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B1PROX_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B1PROX_User, 1);
 
 
 % --- Executes on button press in BR2B1PROX_SG_NO.
 function BR2B1PROX_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1PROX_SG_NO'];
-if get(hObject,'Value') == 1
-    try
-        g
-else
-    
-end
-
-try
-    if get(hObject,'Value') == 1
-        set_param(blockname,'Value','1');
-        set(hObject,'CData',imread('NOclosed.png'));
-        'here'
-    else
-        set_param(blockname,'Value','0');
-        set(hObject,'CData',imread('NOopen.png'));
-        'no, here'
-    end
-catch err
-    if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName');
-        'maybe the model isn''t open'
-        get(hObject,'Value')
-    else
-        'panic'
-    end
-end
+toggleNO(hObject,blockname);
 
 
 
-% --- Executes on button press in pushbutton5.
-function pushbutton5_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton5 (see GCBO)
+% --- Executes on button press in BR2B1DIST_User.
+function BR2B1DIST_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1DIST_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton6.
-function pushbutton6_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton6 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B1DIST_SG_NC.
+function BR2B1DIST_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B1DIST_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B1DIST_User, 1);
 
 
 % --- Executes on button press in BR2B1DIST_SG_NO.
 function BR2B1DIST_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1DIST_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton8.
-function pushbutton8_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton8 (see GCBO)
+% --- Executes on button press in BR2B2PROX_User.
+function BR2B2PROX_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2PROX_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton9.
-function pushbutton9_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton9 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B2PROX_SG_NC.
+function BR2B2PROX_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B2PROX_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B2PROX_User, 1);
 
 
 % --- Executes on button press in BR2B2PROX_SG_NO.
 function BR2B2PROX_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2PROX_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton11.
-function pushbutton11_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton11 (see GCBO)
+% --- Executes on button press in BR2B2DIST_User.
+function BR2B2DIST_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2DIST_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton12.
-function pushbutton12_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton12 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B2DIST_SG_NC.
+function BR2B2DIST_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B2DIST_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B2DIST_User, 1);
 
 
 % --- Executes on button press in BR2B2DIST_SG_NO.
 function BR2B2DIST_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2DIST_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton14.
-function pushbutton14_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton14 (see GCBO)
+% --- Executes on button press in TIE1_User.
+function TIE1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to TIE1_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton15.
-function pushbutton15_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton15 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in TIE1_SG_NC.
+function TIE1_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/TIE1_SG_NC' ];
+toggleNC(hObject, blockname, handles.TIE1_User, 1);
 
 
 % --- Executes on button press in TIE1_SG_NO.
 function TIE1_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/TIE1_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton17.
-function pushbutton17_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton17 (see GCBO)
+
+% --- Executes on button press in TIE2_User.
+function TIE2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to TIE2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton18.
-function pushbutton18_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton18 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in TIE2_SG_NC.
+function TIE2_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/TIE2_SG_NC' ];
+toggleNC(hObject, blockname, handles.TIE2_User, 1);
 
 
 % --- Executes on button press in TIE2_SG_NO.
 function TIE2_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/TIE2_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton23.
-function pushbutton23_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton23 (see GCBO)
+% --- Executes on button press in BR1B1PROX_User.
+function BR1B1PROX_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1PROX_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton24.
-function pushbutton24_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton24 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B1PROX_SG_NC.
+function BR1B1PROX_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B1PROX_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B1PROX_User, 1);
 
 
 % --- Executes on button press in BR1B1PROX_SG_NO.
 function BR1B1PROX_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1PROX_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton26.
-function pushbutton26_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton26 (see GCBO)
+
+% --- Executes on button press in BR1B1DIST_User.
+function BR1B1DIST_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1DIST_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton27.
-function pushbutton27_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton27 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B1DIST_SG_NC.
+function BR1B1DIST_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B1DIST_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B1DIST_User, 1);
 
 
 % --- Executes on button press in BR1B1DIST_SG_NO.
 function BR1B1DIST_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1DIST_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton29.
-function pushbutton29_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton29 (see GCBO)
+
+% --- Executes on button press in BR1B2PROX_User.
+function BR1B2PROX_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2PROX_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton30.
-function pushbutton30_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton30 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B2PROX_SG_NC.
+function BR1B2PROX_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B2PROX_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B2PROX_User, 1);
 
 
 % --- Executes on button press in BR1B2PROX_SG_NO.
 function BR1B2PROX_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2PROX_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton32.
-function pushbutton32_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton32 (see GCBO)
+
+% --- Executes on button press in BR1B2DIST_User.
+function BR1B2DIST_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2DIST_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton33.
-function pushbutton33_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton33 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B2DIST_SG_NC.
+function BR1B2DIST_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B2DIST_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B2DIST_User, 1);
 
 
 % --- Executes on button press in BR1B2DIST_SG_NO.
 function BR1B2DIST_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2DIST_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton35.
-function pushbutton35_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton35 (see GCBO)
+
+% --- Executes on button press in BR2B1L1_User.
+function BR2B1L1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L1_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton36.
-function pushbutton36_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton36 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B1L1_SG_NC.
+function BR2B1L1_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L1_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B1L1_User, 0);
 
 
 % --- Executes on button press in BR2B1L1_SG_NO.
 function BR2B1L1_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L1_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton38.
-function pushbutton38_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton38 (see GCBO)
+
+% --- Executes on button press in BR2B1L2_User.
+function BR2B1L2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton39.
-function pushbutton39_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton39 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B1L2_SG_NC.
+function BR2B1L2_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L2_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B1L2_User, 0);
 
 % --- Executes on button press in BR2B1L2_SG_NO.
 function BR2B1L2_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L2_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton41.
-function pushbutton41_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton41 (see GCBO)
+% --- Executes on button press in BR2B1L3_User.
+function BR2B1L3_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B1L3_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton42.
-function pushbutton42_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton42 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
+% --- Executes on button press in BR2B1L3_SG_NC.
+function BR2B1L3_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L3_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B1L3_User, 0);
 
 % --- Executes on button press in BR2B1L3_SG_NO.
 function BR2B1L3_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1L3_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton44.
-function pushbutton44_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton44 (see GCBO)
+
+% --- Executes on button press in BR2B2L1_User.
+function BR2B2L1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L1_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton45.
-function pushbutton45_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton45 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B2L1_SG_NC.
+function BR2B2L1_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L1_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B2L1_User, 0);
 
 
 % --- Executes on button press in BR2B2L1_SG_NO.
 function BR2B2L1_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L1_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton47.
-function pushbutton47_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton47 (see GCBO)
+
+% --- Executes on button press in BR2B2L2_User.
+function BR2B2L2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton48.
-function pushbutton48_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton48 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B2L2_SG_NC.
+function BR2B2L2_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L2_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B2L2_User, 0);
 
 
 % --- Executes on button press in BR2B2L2_SG_NO.
 function BR2B2L2_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L2_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton50.
-function pushbutton50_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton50 (see GCBO)
+
+% --- Executes on button press in BR2B2L3_User.
+function BR2B2L3_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR2B2L3_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton51.
-function pushbutton51_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton51 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR2B2L3_SG_NC.
+function BR2B2L3_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR2B2L3_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR2B2L3_User, 0);
 
 
 % --- Executes on button press in BR2B2L3_SG_NO.
 function BR2B2L3_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L3_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton53.
-function pushbutton53_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton53 (see GCBO)
+
+% --- Executes on button press in BR1B1L1_User.
+function BR1B1L1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L1_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton54.
-function pushbutton54_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton54 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B1L1_SG_NC.
+function BR1B1L1_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L1_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B1L1_User, 0);
 
 
 % --- Executes on button press in BR1B1L1_SG_NO.
 function BR1B1L1_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L1_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton56.
-function pushbutton56_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton56 (see GCBO)
+
+% --- Executes on button press in BR1B1L2_User.
+function BR1B1L2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton57.
-function pushbutton57_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton57 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B1L2_SG_NC.
+function BR1B1L2_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L2_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B1L2_User, 0);
 
 
 % --- Executes on button press in BR1B1L2_SG_NO.
 function BR1B1L2_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L2_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton59.
-function pushbutton59_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton59 (see GCBO)
+
+% --- Executes on button press in BR1B1L3_User.
+function BR1B1L3_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B1L3_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton60.
-function pushbutton60_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton60 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B1L3_SG_NC.
+function BR1B1L3_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L3_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B1L3_User, 0);
 
 
 % --- Executes on button press in BR1B1L3_SG_NO.
 function BR1B1L3_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1L3_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
+
 
 % --- Executes on button press in pushbutton62.
 function pushbutton62_Callback(hObject, eventdata, handles)
@@ -2107,73 +1968,55 @@ function pushbutton62_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton63.
-function pushbutton63_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton63 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B2L1_SG_NC.
+function BR1B2L1_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L1_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B2L1_User, 0);
 
 
 % --- Executes on button press in BR1B2L1_SG_NO.
 function BR1B2L1_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L1_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton65.
-function pushbutton65_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton65 (see GCBO)
+
+% --- Executes on button press in BR1B2L2_User.
+function BR1B2L2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton66.
-function pushbutton66_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton66 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B2L2_SG_NC.
+function BR1B2L2_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L2_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B2L2_User, 0);
 
 
 % --- Executes on button press in BR1B2L2_SG_NO.
 function BR1B2L2_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L2_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
 
-% --- Executes on button press in pushbutton68.
-function pushbutton68_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton68 (see GCBO)
+
+% --- Executes on button press in BR1B2L3_User.
+function BR1B2L3_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L3_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton69.
-function pushbutton69_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton69 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% --- Executes on button press in BR1B2L3_SG_NC.
+function BR1B2L3_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L3_SG_NC' ];
+toggleNC(hObject, blockname, handles.BR1B2L3_User, 0);
 
 
 % --- Executes on button press in BR1B2L3_SG_NO.
 function BR1B2L3_SG_NO_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2L3_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+toggleNO(hObject,blockname);
+
 
 % --- Executes on button press in pushbutton71.
 function pushbutton71_Callback(hObject, eventdata, handles)
@@ -2189,16 +2032,10 @@ function pushbutton72_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in SRC1_SG_NO.
-function SRC1_SG_NO_Callback(hObject, eventdata, handles)
-blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC1_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+% --- Executes on button press in SRC1_SG_NC.
+function SRC1_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC1_SG_NC'];
+toggleNC_SRC(hObject,blockname,handles.SRC1_User);
 
 % --- Executes on button press in pushbutton74.
 function pushbutton74_Callback(hObject, eventdata, handles)
@@ -2214,16 +2051,11 @@ function pushbutton75_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in SRC2_SG_NO.
-function SRC2_SG_NO_Callback(hObject, eventdata, handles)
-blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC2_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+% --- Executes on button press in SRC2_SG_NC.
+function SRC2_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC2_SG_NC'];
+toggleNC_SRC(hObject,blockname,handles.SRC2_User);
+
 
 % --- Executes on button press in pushbutton77.
 function pushbutton77_Callback(hObject, eventdata, handles)
@@ -2239,16 +2071,11 @@ function pushbutton78_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in SRC3_SG_NO.
-function SRC3_SG_NO_Callback(hObject, eventdata, handles)
-blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC3_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+% --- Executes on button press in SRC3_SG_NC.
+function SRC3_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC3_SG_NC'];
+toggleNC_SRC(hObject,blockname,handles.SRC3_User);
+
 
 % --- Executes on button press in pushbutton80.
 function pushbutton80_Callback(hObject, eventdata, handles)
@@ -2264,16 +2091,11 @@ function pushbutton81_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in SRC4_SG_NO.
-function SRC4_SG_NO_Callback(hObject, eventdata, handles)
-blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC4_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+% --- Executes on button press in SRC4_SG_NC.
+function SRC4_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC4_SG_NC'];
+toggleNC_SRC(hObject,blockname,handles.SRC4_User);
+
 
 % --- Executes on button press in pushbutton83.
 function pushbutton83_Callback(hObject, eventdata, handles)
@@ -2289,16 +2111,11 @@ function pushbutton84_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in SRC5_SG_NO.
-function SRC5_SG_NO_Callback(hObject, eventdata, handles)
-blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC5_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+% --- Executes on button press in SRC5_SG_NC.
+function SRC5_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC5_SG_NC'];
+toggleNC_SRC(hObject,blockname,handles.SRC5_User);
+
 
 % --- Executes on button press in pushbutton86.
 function pushbutton86_Callback(hObject, eventdata, handles)
@@ -2314,16 +2131,11 @@ function pushbutton87_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in SRC6_SG_NO.
-function SRC6_SG_NO_Callback(hObject, eventdata, handles)
-blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC6_SG_NO'];
-if get(hObject,'Value') == 1
-    set_param(blockname,'Value','1');
-    set_param(hObject,'CData',imread('NOclosed.png'));
-else
-    set_param(blockname,'Value','0');
-    set_param(hObject,'CData',imread('NOopen.png'));
-end
+% --- Executes on button press in SRC6_SG_NC.
+function SRC6_SG_NC_Callback(hObject, eventdata, handles)
+blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC6_SG_NC'];
+toggleNC_SRC(hObject,blockname,handles.SRC6_User);
+
 
 % --- Executes on button press in pushbutton89.
 function pushbutton89_Callback(hObject, eventdata, handles)
@@ -2877,98 +2689,321 @@ end
 % --- Executes on button press in MainFault.
 function MainFault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/Main_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR2B1_Fault.
 function BR2B1_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B1_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR2TIE1_Fault.
 function BR2TIE1_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2TIE1_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR2B2_Fault.
 function BR2B2_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2B2_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR1B1_Fault.
 function BR1B1_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B1_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR1TIE1_Fault.
 function BR1TIE1_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1TIE1_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR1B2_Fault.
 function BR1B2_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1B2_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR2TIE2_Fault.
 function BR2TIE2_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR2TIE2_Fault'];
-if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
-else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
-end
+toggleFault(hObject,blockname);
 
 % --- Executes on button press in BR1TIE2_Fault.
 function BR1TIE2_Fault_Callback(hObject, eventdata, handles)
 blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/BR1TIE2_Fault'];
+toggleFault(hObject,blockname);
+
+function toggleNO(hObject,blockname)
 if get(hObject,'Value') == 1
-    set(hObject,'CData',imread('Fault.png'));
-    set_param(blockname,'Value','1');
+    try
+        set_param(blockname,'Value','1');
+    catch err
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName');
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end
+    set(hObject,'CData',imread('NOclosed.png'));
 else
-    set(hObject,'CData',imread('NoFault.png'));
-    set_param(blockname,'Value','0');
+    try
+        set_param(blockname,'Value','0');
+    catch err
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName');
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end
+    set(hObject,'CData',imread('NOopen.png'));
 end
+
+function toggleFault(hObject,blockname)
+if get(hObject,'Value') == 1
+    try
+        set_param(blockname,'Value','1');        
+    catch err
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName');
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end
+    set(hObject,'CData',imread('Fault.png'));
+else
+    try
+        set_param(blockname,'Value','0');        
+    catch err
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end    
+    set(hObject,'CData',imread('NoFault.png'));
+end
+
+function toggleNC(hObject,blockname,associatedUserObject,userNC)
+if get(hObject,'Value') == 1
+    try
+        set_param(blockname,'Value','1');
+    catch
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end    
+    set(hObject,'CData',imread('NCopen.png'));
+else
+    try
+        set_param(blockname,'Value','0');
+    catch err
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end
+    if get(associatedUserObject,'Value') == 0
+        if userNC
+            set(hObject,'CData',imread('NCclosedpassing.png'));
+        else
+            set(hObject,'CData',imread('NCclosedUseropen.png'));
+        end
+    else get(associatedUserObject,'Value') == 1
+        if userNC
+            set(hObject,'CData',imread('NCclosedUseropen.png'));
+        else
+            set(hObject,'CData',imread('NCclosedpassing.png'));
+        end
+    end    
+end
+
+function toggleNC_SRC(hObject,blockname,associatedUserObject)
+if get(hObject,'Value') == 1
+    try
+        set_param(blockname,'Value','1');
+    catch
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end    
+    set(hObject,'CData',imread('NCSRCopen.png'));
+else
+    try
+        set_param(blockname,'Value','0');
+    catch err
+        if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
+            'maybe the model isn''t open'
+        else
+            'panic'
+        end
+    end
+    if get(associatedUserObject,'Value') == 0
+        set(hObject,'CData',imread('NCSRCclosedUseropen.png'));
+    else get(associatedUserObject,'Value') == 1
+        set(hObject,'CData',imread('NCSRCclosedpassing.png'));       
+    end    
+end
+
+% --- Executes on key press with focus on BR2B2L3_SG_NC and none of its controls.
+function BR2B2L3_SG_NC_KeyPressFcn(hObject, eventdata, handles)
+% hObject    handle to BR2B2L3_SG_NC (see GCBO)
+% eventdata  structure with the following fields (see MATLAB.UI.CONTROL.UICONTROL)
+%	Key: name of the key that was pressed, in lower case
+%	Character: character interpretation of the key(s) that was pressed
+%	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in BR1B2L1_User.
+function BR1B2L1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to BR1B2L1_User (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of BR1B2L1_User
+
+function GUIScope(block,eventData)
+%get GUIhandles
+h = evalin('base','GUIhandle');
+
+%read data from Simulink model
+now = block.currentTime;
+BR1B1L1_Current = min(block.InputPort(1).Data);
+BR1B1L2_Current = min(block.InputPort(2).Data);
+BR1B1L3_Current = min(block.InputPort(3).Data);
+BR1B2L1_Current = min(block.InputPort(4).Data);
+BR1B2L2_Current = min(block.InputPort(5).Data);
+BR1B2L3_Current = min(block.InputPort(6).Data);
+BR2B1L1_Current = min(block.InputPort(7).Data);
+BR2B1L2_Current = min(block.InputPort(8).Data);
+BR2B1L3_Current = min(block.InputPort(9).Data);
+BR2B2L1_Current = min(block.InputPort(10).Data);
+BR2B2L2_Current = min(block.InputPort(11).Data);
+BR2B2L3_Current = min(block.InputPort(12).Data);
+BR1B1_Current = min(block.InputPort(13).Data);
+BR1B2_Current = min(block.InputPort(14).Data);
+BR2B1_Current = min(block.InputPort(15).Data);
+BR2B2_Current = min(block.InputPort(16).Data);
+TIE1_Current = min(block.InputPort(17).Data);
+TIE2_Current = min(block.InputPort(18).Data);
+BR1B1_Voltage = min(block.InputPort(19).Data);
+BR1B2_Voltage = min(block.InputPort(20).Data);
+BR2B1_Voltage = min(block.InputPort(21).Data);
+BR2B2_Voltage = min(block.InputPort(22).Data);
+Main_Voltage = min(block.InputPort(23).Data);
+SRC1Unreg_Current = min(block.InputPort(24).Data):
+SRC1Unreg_Voltage = min(block.InputPort(25).Data);
+SRC1Reg_Current = min(block.InputPort(26).Data);
+SRC1Reg_Voltage = min(block.InputPort(27).Data);
+SRC2Unreg_Current = min(block.InputPort(28).Data):
+SRC2Unreg_Voltage = min(block.InputPort(29).Data);
+SRC2Reg_Current = min(block.InputPort(30).Data);
+SRC2Reg_Voltage = min(block.InputPort(31).Data);
+SRC3Unreg_Current = min(block.InputPort(32).Data):
+SRC3Unreg_Voltage = min(block.InputPort(33).Data);
+SRC3Reg_Current = min(block.InputPort(34).Data);
+SRC3Reg_Voltage = min(block.InputPort(35).Data);
+SRC4Unreg_Current = min(block.InputPort(36).Data):
+SRC4Unreg_Voltage = min(block.InputPort(37).Data);
+SRC4Reg_Current = min(block.InputPort(38).Data);
+SRC4Reg_Voltage = min(block.InputPort(39).Data);
+SRC5Unreg_Current = min(block.InputPort(40).Data):
+SRC5Unreg_Voltage = min(block.InputPort(41).Data);
+SRC5Reg_Current = min(block.InputPort(42).Data);
+SRC5Reg_Voltage = min(block.InputPort(43).Data);
+SRC6Unreg_Current = min(block.InputPort(44).Data):
+SRC6Unreg_Voltage = min(block.InputPort(45).Data);
+SRC6Reg_Current = min(block.InputPort(46).Data);
+SRC6Reg_Voltage = min(block.InputPort(47).Data);
+BR1B1L1_User = min(block.InputPort(48).Data);
+BR1B1L2_User = min(block.InputPort(49).Data);
+BR1B1L3_User = min(block.InputPort(50).Data);
+BR1B2L1_User = min(block.InputPort(51).Data);
+BR1B2L2_User = min(block.InputPort(52).Data);
+BR1B2L3_User = min(block.InputPort(53).Data);
+BR2B1L1_User = min(block.InputPort(54).Data);
+BR2B1L2_User = min(block.InputPort(55).Data);
+BR2B1L3_User = min(block.InputPort(56).Data);
+BR2B2L1_User = min(block.InputPort(57).Data);
+BR2B2L2_User = min(block.InputPort(58).Data);
+BR2B2L3_User = min(block.InputPort(59).Data);
+BR1B1PROX_User = min(block.InputPort(60).Data);
+BR1B2PROX_User = min(block.InputPort(61).Data);
+BR2B1PROX_User = min(block.InputPort(62).Data);
+BR2B2PROX_User = min(block.InputPort(63).Data);
+BR1B1DIST_User = min(block.InputPort(64).Data);
+BR1B2DIST_User = min(block.InputPort(65).Data);
+BR2B1DIST_User = min(block.InputPort(66).Data);
+BR2B2DIST_User = min(block.InputPort(67).Data);
+TIE1_User = min(block.InputPort(68).Data);
+TIE2_User = min(block.InputPort(69).Data);
+SRC1_User = min(block.InputPort(70).Data;
+SRC2_User = min(block.InputPort(71).Data;
+SRC3_User = min(block.InputPort(72).Data;
+SRC4_User = min(block.InputPort(73).Data;
+SRC5_User = min(block.InputPort(74).Data;
+SRC6_User = min(block.InputPort(75).Data;
+
+
+%update data display fields on GUI
+set(h.BR1B1L1_Current,'String',num2str(BR1B1L1_Current));
+set(h.BR1B1L2_Current,'String',num2str(BR1B1L2_Current));
+set(h.BR1B1L3_Current,'String',num2str(BR1B1L3_Current));
+set(h.BR1B2L1_Current,'String',num2str(BR1B2L1_Current));
+set(h.BR1B2L2_Current,'String',num2str(BR1B2L2_Current));
+set(h.BR1B2L3_Current,'String',num2str(BR1B2L3_Current));
+set(h.BR2B1L1_Current,'String',num2str(BR2B1L1_Current));
+set(h.BR2B1L2_Current,'String',num2str(BR2B1L2_Current));
+set(h.BR2B1L3_Current,'String',num2str(BR2B1L3_Current));
+set(h.BR2B2L1_Current,'String',num2str(BR2B2L1_Current));
+set(h.BR2B2L2_Current,'String',num2str(BR2B2L2_Current));
+set(h.BR2B2L3_Current,'String',num2str(BR2B2L3_Current));
+set(h.BR1B1_Current,'String',num2str(BR1B1_Current));
+set(h.BR1B2_Current,'String',num2str(BR1B2_Current));
+set(h.BR2B1_Current,'String',num2str(BR2B1_Current));
+set(h.BR2B2_Current,'String',num2str(BR2B2_Current));
+set(h.TIE1_Current,'String',num2str(TIE1_Current));
+set(h.TIE2_Current,'String',num2str(TIE2_Current));
+set(h.BR1B1_Voltage,'String',num2str(BR1B1_Voltage));
+set(h.BR1B2_Voltage,'String',num2str(BR1B2_Voltage));
+set(h.BR2B1_Voltage,'String',num2str(BR2B1_Voltage));
+set(h.BR2B2_Voltage,'String',num2str(BR2B2_Voltage));
+set(h.Main_Voltage,'String',num2str(Main_Voltage));
+set(h.SRC1Unreg_Current,'String',num2str(SRC1Unreg_Current));
+set(h.SRC1Unreg_Voltage,'String',num2str(SRC1Unreg_Voltage));
+set(h.SRC1Reg_Current,'String',num2str(SRC1Reg_Current));
+set(h.SRC1Reg_Voltage,'String',num2str(SRC1Reg_Voltage));
+set(h.SRC2Unreg_Current,'String',num2str(SRC2Unreg_Current));
+set(h.SRC2Unreg_Voltage,'String',num2str(SRC2Unreg_Voltage));
+set(h.SRC2Reg_Current,'String',num2str(SRC2Reg_Current));
+set(h.SRC2Reg_Voltage,'String',num2str(SRC2Reg_Voltage));
+set(h.SRC3Unreg_Current,'String',num2str(SRC3Unreg_Current));
+set(h.SRC3Unreg_Voltage,'String',num2str(SRC3Unreg_Voltage));
+set(h.SRC3Reg_Current,'String',num2str(SRC3Reg_Current));
+set(h.SRC3Reg_Voltage,'String',num2str(SRC3Reg_Voltage));
+set(h.SRC4Unreg_Current,'String',num2str(SRC4Unreg_Current));
+set(h.SRC4Unreg_Voltage,'String',num2str(SRC4Unreg_Voltage));
+set(h.SRC4Reg_Current,'String',num2str(SRC4Reg_Current));
+set(h.SRC4Reg_Voltage,'String',num2str(SRC4Reg_Voltage));
+set(h.SRC5Unreg_Current,'String',num2str(SRC5Unreg_Current));
+set(h.SRC5Unreg_Voltage,'String',num2str(SRC5Unreg_Voltage));
+set(h.SRC5Reg_Current,'String',num2str(SRC5Reg_Current));
+set(h.SRC5Reg_Voltage,'String',num2str(SRC5Reg_Voltage));
+set(h.SRC6Unreg_Current,'String',num2str(SRC6Unreg_Current));
+set(h.SRC6Unreg_Voltage,'String',num2str(SRC6Unreg_Voltage));
+set(h.SRC6Reg_Current,'String',num2str(SRC6Reg_Current));
+set(h.SRC6Reg_Voltage,'String',num2str(SRC6Reg_Voltage));
+
+%adjust graphics based on data
+if BR1B1L1_User == 1
+    if get(h.BR1B1L1_SG_NC,'Value') == 1
+        set(h.BR1B1LI_
+    else
+        set(h.BR1B1L1_User
+    end
+end
+
+
