@@ -2997,12 +2997,63 @@ set(h.SRC6Unreg_Voltage,'String',num2str(SRC6Unreg_Voltage));
 set(h.SRC6Reg_Current,'String',num2str(SRC6Reg_Current));
 set(h.SRC6Reg_Voltage,'String',num2str(SRC6Reg_Voltage));
 
+%calculate power consumptions and display
+BR1B1L1_Power = BR1B1L1_Current * BR1B1_Voltage;
+BR1B1L2_Power = BR1B1L2_Current * BR1B1_Voltage;
+BR1B1L3_Power = BR1B1L3_Current * BR1B1_Voltage;
+BR1B2L1_Power = BR1B2L1_Current * BR1B2_Voltage;
+BR1B2L2_Power = BR1B2L2_Current * BR1B2_Voltage;
+BR1B2L3_Power = BR1B2L3_Current * BR1B2_Voltage;
+BR2B1L1_Power = BR2B1L1_Current * BR2B1_Voltage;
+BR2B1L2_Power = BR2B1L2_Current * BR2B1_Voltage;
+BR2B1L3_Power = BR2B1L3_Current * BR2B1_Voltage;
+BR2B2L1_Power = BR2B2L1_Current * BR2B2_Voltage;
+BR2B2L2_Power = BR2B2L2_Current * BR2B2_Voltage;
+BR2B2L3_Power = BR2B2L3_Current * BR2B2_Voltage;
+SRC1_Power = SRC1Reg_Voltage * SRC1Reg_Current;
+SRC2_Power = SRC2Reg_Voltage * SRC2Reg_Current;
+SRC3_Power = SRC3Reg_Voltage * SRC3Reg_Current;
+SRC4_Power = SRC4Reg_Voltage * SRC4Reg_Current;
+SRC5_Power = SRC5Reg_Voltage * SRC5Reg_Current;
+SRC6_Power = SRC6Reg_Voltage * SRC6Reg_Current;
+
+set(h.BR1B1L1_Power,'String',num2str(BR1B1L1_Power));
+set(h.BR1B1L2_Power,'String',num2str(BR1B1L2_Power));
+set(h.BR1B1L3_Power,'String',num2str(BR1B1L3_Power));
+set(h.BR1B2L1_Power,'String',num2str(BR1B2L1_Power));
+set(h.BR1B2L2_Power,'String',num2str(BR1B2L2_Power));
+set(h.BR1B2L3_Power,'String',num2str(BR1B2L3_Power));
+set(h.BR2B1L1_Power,'String',num2str(BR2B1L1_Power));
+set(h.BR2B1L2_Power,'String',num2str(BR2B1L2_Power));
+set(h.BR2B1L3_Power,'String',num2str(BR2B1L3_Power));
+set(h.BR2B2L1_Power,'String',num2str(BR2B2L1_Power));
+set(h.BR2B2L2_Power,'String',num2str(BR2B2L2_Power));
+set(h.BR2B2L3_Power,'String',num2str(BR2B2L3_Power));
+set(h.SRC1_Power,'String',num2str(SRC1_Power));
+set(h.SRC2_Power,'String',num2str(SRC2_Power));
+set(h.SRC3_Power,'String',num2str(SRC3_Power));
+set(h.SRC4_Power,'String',num2str(SRC4_Power));
+set(h.SRC5_Power,'String',num2str(SRC5_Power));
+set(h.SRC6_Power,'String',num2str(SRC6_Power));
+
 %adjust graphics based on data
 if BR1B1L1_User == 1
-    if get(h.BR1B1L1_SG_NC,'Value') == 1
-        set(h.BR1B1LI_
-    else
-        set(h.BR1B1L1_User
+    %check to see if the graphic needs to be changed, we don't want to
+    %waste time running imread all the time
+    if get(h.BR1B1L1_User,'Value') == 0
+        if get(h.BR1B1L1_SG_NC,'Value') == 1
+            set(h.BR1B1LI_SG_NC,'CData',imread('NCclosedpassing.png'));
+        else
+            set(h.BR1B1L1_SG_NC,'CData',imread('NCopen.png'));
+        end
+        set(h.BR1B1L1_User,'CData',imread('Userclosedpassing.png'));
+        set(h.BR1B1L1_User,'Value', 1);
+    end
+else
+    if get(h.BR1B1L1_User,'Value') == 1
+        set(h.BR1B1LI_SG_NC,'CData',imread('NCclosedUseropen.png'));
+        set(h.BR1B1L1_User,'CData',imread('Useropen.png'));
+        set(h.BR1B1L1_User,'Value', 0);
     end
 end
 

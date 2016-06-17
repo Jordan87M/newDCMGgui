@@ -22,7 +22,7 @@ function varargout = GUIv2(varargin)
 
 % Edit the above text to modify the response to help GUIv2
 
-% Last Modified by GUIDE v2.5 15-Jun-2016 20:12:55
+% Last Modified by GUIDE v2.5 17-Jun-2016 06:40:38
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -56,8 +56,8 @@ function GUIv2_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 
 % Update handles structure
-h = guidata(hObject, handles);
-assignin('base','GUIhandles',h);
+guidata(hObject, handles);
+assignin('base','GUIhandles',handles);
 
 'initializing workspace variables'
 assignin('base','modelname','DCMG_SG');
@@ -2137,44 +2137,44 @@ blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC6_SG_
 toggleNC_SRC(hObject,blockname,handles.SRC6_User);
 
 
-% --- Executes on button press in pushbutton89.
-function pushbutton89_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton89 (see GCBO)
+% --- Executes on button press in SRC1_User.
+function SRC1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton90.
-function pushbutton90_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton90 (see GCBO)
+% --- Executes on button press in SRC2_User.
+function SRC2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton91.
-function pushbutton91_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton91 (see GCBO)
+% --- Executes on button press in SRC3_User.
+function SRC3_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton92.
-function pushbutton92_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton92 (see GCBO)
+% --- Executes on button press in SRC4_User.
+function SRC4_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton93.
-function pushbutton93_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton93 (see GCBO)
+% --- Executes on button press in SRC5_User.
+function SRC5_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton94.
-function pushbutton94_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton94 (see GCBO)
+% --- Executes on button press in SRC6_User.
+function SRC6_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
@@ -2785,7 +2785,7 @@ function toggleNC(hObject,blockname,associatedUserObject,userNC)
 if get(hObject,'Value') == 1
     try
         set_param(blockname,'Value','1');
-    catch
+    catch err
         if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
             'maybe the model isn''t open'
         else
@@ -2822,15 +2822,17 @@ function toggleNC_SRC(hObject,blockname,associatedUserObject)
 if get(hObject,'Value') == 1
     try
         set_param(blockname,'Value','1');
-    catch
+    catch err
         if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
             'maybe the model isn''t open'
         else
             'panic'
         end
     end    
+    'here'
     set(hObject,'CData',imread('NCSRCopen.png'));
 else
+    get(hObject,'Value')
     try
         set_param(blockname,'Value','0');
     catch err
@@ -2841,8 +2843,10 @@ else
         end
     end
     if get(associatedUserObject,'Value') == 0
+        'no here'
         set(hObject,'CData',imread('NCSRCclosedUseropen.png'));
-    else get(associatedUserObject,'Value') == 1
+    else
+        'no over here'
         set(hObject,'CData',imread('NCSRCclosedpassing.png'));       
     end    
 end
@@ -2894,27 +2898,27 @@ BR1B2_Voltage = min(block.InputPort(20).Data);
 BR2B1_Voltage = min(block.InputPort(21).Data);
 BR2B2_Voltage = min(block.InputPort(22).Data);
 Main_Voltage = min(block.InputPort(23).Data);
-SRC1Unreg_Current = min(block.InputPort(24).Data):
+SRC1Unreg_Current = min(block.InputPort(24).Data);
 SRC1Unreg_Voltage = min(block.InputPort(25).Data);
 SRC1Reg_Current = min(block.InputPort(26).Data);
 SRC1Reg_Voltage = min(block.InputPort(27).Data);
-SRC2Unreg_Current = min(block.InputPort(28).Data):
+SRC2Unreg_Current = min(block.InputPort(28).Data);
 SRC2Unreg_Voltage = min(block.InputPort(29).Data);
 SRC2Reg_Current = min(block.InputPort(30).Data);
 SRC2Reg_Voltage = min(block.InputPort(31).Data);
-SRC3Unreg_Current = min(block.InputPort(32).Data):
+SRC3Unreg_Current = min(block.InputPort(32).Data);
 SRC3Unreg_Voltage = min(block.InputPort(33).Data);
 SRC3Reg_Current = min(block.InputPort(34).Data);
 SRC3Reg_Voltage = min(block.InputPort(35).Data);
-SRC4Unreg_Current = min(block.InputPort(36).Data):
+SRC4Unreg_Current = min(block.InputPort(36).Data);
 SRC4Unreg_Voltage = min(block.InputPort(37).Data);
 SRC4Reg_Current = min(block.InputPort(38).Data);
 SRC4Reg_Voltage = min(block.InputPort(39).Data);
-SRC5Unreg_Current = min(block.InputPort(40).Data):
+SRC5Unreg_Current = min(block.InputPort(40).Data);
 SRC5Unreg_Voltage = min(block.InputPort(41).Data);
 SRC5Reg_Current = min(block.InputPort(42).Data);
 SRC5Reg_Voltage = min(block.InputPort(43).Data);
-SRC6Unreg_Current = min(block.InputPort(44).Data):
+SRC6Unreg_Current = min(block.InputPort(44).Data);
 SRC6Unreg_Voltage = min(block.InputPort(45).Data);
 SRC6Reg_Current = min(block.InputPort(46).Data);
 SRC6Reg_Voltage = min(block.InputPort(47).Data);
@@ -2940,12 +2944,12 @@ BR2B1DIST_User = min(block.InputPort(66).Data);
 BR2B2DIST_User = min(block.InputPort(67).Data);
 TIE1_User = min(block.InputPort(68).Data);
 TIE2_User = min(block.InputPort(69).Data);
-SRC1_User = min(block.InputPort(70).Data;
-SRC2_User = min(block.InputPort(71).Data;
-SRC3_User = min(block.InputPort(72).Data;
-SRC4_User = min(block.InputPort(73).Data;
-SRC5_User = min(block.InputPort(74).Data;
-SRC6_User = min(block.InputPort(75).Data;
+SRC1_User = min(block.InputPort(70).Data);
+SRC2_User = min(block.InputPort(71).Data);
+SRC3_User = min(block.InputPort(72).Data);
+SRC4_User = min(block.InputPort(73).Data);
+SRC5_User = min(block.InputPort(74).Data);
+SRC6_User = min(block.InputPort(75).Data);
 
 
 %update data display fields on GUI
@@ -2997,8 +3001,49 @@ set(h.SRC6Unreg_Voltage,'String',num2str(SRC6Unreg_Voltage));
 set(h.SRC6Reg_Current,'String',num2str(SRC6Reg_Current));
 set(h.SRC6Reg_Voltage,'String',num2str(SRC6Reg_Voltage));
 
+%calculate power consumptions and display
+BR1B1L1_Power = BR1B1L1_Current * BR1B1_Voltage;
+BR1B1L2_Power = BR1B1L2_Current * BR1B1_Voltage;
+BR1B1L3_Power = BR1B1L3_Current * BR1B1_Voltage;
+BR1B2L1_Power = BR1B2L1_Current * BR1B2_Voltage;
+BR1B2L2_Power = BR1B2L2_Current * BR1B2_Voltage;
+BR1B2L3_Power = BR1B2L3_Current * BR1B2_Voltage;
+BR2B1L1_Power = BR2B1L1_Current * BR2B1_Voltage;
+BR2B1L2_Power = BR2B1L2_Current * BR2B1_Voltage;
+BR2B1L3_Power = BR2B1L3_Current * BR2B1_Voltage;
+BR2B2L1_Power = BR2B2L1_Current * BR2B2_Voltage;
+BR2B2L2_Power = BR2B2L2_Current * BR2B2_Voltage;
+BR2B2L3_Power = BR2B2L3_Current * BR2B2_Voltage;
+SRC1_Power = SRC1Reg_Voltage * SRC1Reg_Current;
+SRC2_Power = SRC2Reg_Voltage * SRC2Reg_Current;
+SRC3_Power = SRC3Reg_Voltage * SRC3Reg_Current;
+SRC4_Power = SRC4Reg_Voltage * SRC4Reg_Current;
+SRC5_Power = SRC5Reg_Voltage * SRC5Reg_Current;
+SRC6_Power = SRC6Reg_Voltage * SRC6Reg_Current;
+
+set(h.BR1B1L1_Power,'String',num2str(BR1B1L1_Power));
+set(h.BR1B1L2_Power,'String',num2str(BR1B1L2_Power));
+set(h.BR1B1L3_Power,'String',num2str(BR1B1L3_Power));
+set(h.BR1B2L1_Power,'String',num2str(BR1B2L1_Power));
+set(h.BR1B2L2_Power,'String',num2str(BR1B2L2_Power));
+set(h.BR1B2L3_Power,'String',num2str(BR1B2L3_Power));
+set(h.BR2B1L1_Power,'String',num2str(BR2B1L1_Power));
+set(h.BR2B1L2_Power,'String',num2str(BR2B1L2_Power));
+set(h.BR2B1L3_Power,'String',num2str(BR2B1L3_Power));
+set(h.BR2B2L1_Power,'String',num2str(BR2B2L1_Power));
+set(h.BR2B2L2_Power,'String',num2str(BR2B2L2_Power));
+set(h.BR2B2L3_Power,'String',num2str(BR2B2L3_Power));
+set(h.SRC1_Power,'String',num2str(SRC1_Power));
+set(h.SRC2_Power,'String',num2str(SRC2_Power));
+set(h.SRC3_Power,'String',num2str(SRC3_Power));
+set(h.SRC4_Power,'String',num2str(SRC4_Power));
+set(h.SRC5_Power,'String',num2str(SRC5_Power));
+set(h.SRC6_Power,'String',num2str(SRC6_Power));
+
 %adjust graphics based on data
 if BR1B1L1_User == 1
+    %check to see if the graphic needs to be changed, we don't want to
+    %waste time running imread all the time
     if get(h.BR1B1L1_User,'Value') == 0
         if get(h.BR1B1L1_SG_NC,'Value') == 1
             set(h.BR1B1LI_SG_NC,'CData',imread('NCclosedpassing.png'));
@@ -3015,5 +3060,3 @@ else
         set(h.BR1B1L1_User,'Value', 0);
     end
 end
-
-
