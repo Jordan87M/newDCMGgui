@@ -22,7 +22,7 @@ function varargout = GUIv2(varargin)
 
 % Edit the above text to modify the response to help GUIv2
 
-% Last Modified by GUIDE v2.5 15-Jun-2016 20:12:55
+% Last Modified by GUIDE v2.5 01-Nov-2016 21:43:14
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -56,8 +56,8 @@ function GUIv2_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 
 % Update handles structure
-h = guidata(hObject, handles);
-assignin('base','GUIhandles',h);
+guidata(hObject, handles);
+assignin('base','GUIhandles',handles);
 
 'initializing workspace variables'
 assignin('base','modelname','DCMG_SG');
@@ -2137,44 +2137,44 @@ blockname = [ evalin('base','modelname') '/' evalin('base','subname') '/SRC6_SG_
 toggleNC_SRC(hObject,blockname,handles.SRC6_User);
 
 
-% --- Executes on button press in pushbutton89.
-function pushbutton89_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton89 (see GCBO)
+% --- Executes on button press in SRC1_User.
+function SRC1_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC1_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton90.
-function pushbutton90_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton90 (see GCBO)
+% --- Executes on button press in SRC2_User.
+function SRC2_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC2_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton91.
-function pushbutton91_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton91 (see GCBO)
+% --- Executes on button press in SRC3_User.
+function SRC3_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC3_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton92.
-function pushbutton92_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton92 (see GCBO)
+% --- Executes on button press in SRC4_User.
+function SRC4_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC4_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton93.
-function pushbutton93_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton93 (see GCBO)
+% --- Executes on button press in SRC5_User.
+function SRC5_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC5_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton94.
-function pushbutton94_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton94 (see GCBO)
+% --- Executes on button press in SRC6_User.
+function SRC6_User_Callback(hObject, eventdata, handles)
+% hObject    handle to SRC6_User (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
@@ -2581,7 +2581,7 @@ end
 
 % --- Executes on button press in Source1IconButton.
 function Source1IconButton_Callback(hObject, eventdata, handles)
-if get(handles.LockSourceIconBox,'Value') == 0
+if get(handles.LockSourceIconCBOX,'Value') == 0
     index = evalin('base','icon1Index');
     index = index + 1;
     if index > evalin('base','length(iconList)')
@@ -2596,7 +2596,7 @@ end
 
 % --- Executes on button press in Source2IconButton.
 function Source2IconButton_Callback(hObject, eventdata, handles)
-if get(handles.LockSourceIconBox,'Value') == 0
+if get(handles.LockSourceIconCBOX,'Value') == 0
     index = evalin('base','icon2Index');
     index = index + 1;
     if index > evalin('base','length(iconList)')
@@ -2612,7 +2612,7 @@ end
 
 % --- Executes on button press in Source3IconButton.
 function Source3IconButton_Callback(hObject, eventdata, handles)
-if get(handles.LockSourceIconBox,'Value') == 0
+if get(handles.LockSourceIconCBOX,'Value') == 0
     index = evalin('base','icon3Index');
     index = index + 1;
     if index > evalin('base','length(iconList)')
@@ -2627,7 +2627,7 @@ end
 
 % --- Executes on button press in Source4IconButton.
 function Source4IconButton_Callback(hObject, eventdata, handles)
-if get(handles.LockSourceIconBox,'Value') == 0
+if get(handles.LockSourceIconCBOX,'Value') == 0
     index = evalin('base','icon4Index');
     index = index + 1;
     if index > evalin('base','length(iconList)')
@@ -2642,7 +2642,7 @@ end
 
 % --- Executes on button press in Source5IconButton.
 function Source5IconButton_Callback(hObject, eventdata, handles)
-if get(handles.LockSourceIconBox,'Value') == 0
+if get(handles.LockSourceIconCBOX,'Value') == 0
     index = evalin('base','icon5Index');
     index = index + 1;
     if index > evalin('base','length(iconList)')
@@ -2657,7 +2657,7 @@ end
 
 % --- Executes on button press in Source6IconButton.
 function Source6IconButton_Callback(hObject, eventdata, handles)
-if get(handles.LockSourceIconBox,'Value') == 0
+if get(handles.LockSourceIconCBOX,'Value') == 0
     index = evalin('base','icon6Index');
     index = index + 1;
     if index > evalin('base','length(iconList)')
@@ -2670,16 +2670,16 @@ else
     'Icons Locked!'
 end
 
-% --- Executes on button press in LockSourceIconBox.
-function LockSourceIconBox_Callback(hObject, eventdata, handles)
+% --- Executes on button press in LockSourceIconCBOX.
+function LockSourceIconCBOX_Callback(hObject, eventdata, handles)
 if get(hObject,'Value') == 1
     assignin('base','IconsLocked',1);
 else
     assignin('base','IconsLocked',0);
 end
 
-% --- Executes on button press in LockLocations.
-function LockLocations_Callback(hObject, eventdata, handles)
+% --- Executes on button press in LockSourceLocationCBOX.
+function LockSourceLocationCBOX_Callback(hObject, eventdata, handles)
 if get(hObject,'Value') == 1
     assignin('base','LocationsLocked',1);
 else
@@ -2785,7 +2785,7 @@ function toggleNC(hObject,blockname,associatedUserObject,userNC)
 if get(hObject,'Value') == 1
     try
         set_param(blockname,'Value','1');
-    catch
+    catch err
         if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
             'maybe the model isn''t open'
         else
@@ -2822,15 +2822,17 @@ function toggleNC_SRC(hObject,blockname,associatedUserObject)
 if get(hObject,'Value') == 1
     try
         set_param(blockname,'Value','1');
-    catch
+    catch err
         if strcmp(err.identifier,'Simulink:Commands:InvSimulinkObjectName')
             'maybe the model isn''t open'
         else
             'panic'
         end
     end    
+    'here'
     set(hObject,'CData',imread('NCSRCopen.png'));
 else
+    get(hObject,'Value')
     try
         set_param(blockname,'Value','0');
     catch err
@@ -2841,8 +2843,10 @@ else
         end
     end
     if get(associatedUserObject,'Value') == 0
+        'no here'
         set(hObject,'CData',imread('NCSRCclosedUseropen.png'));
-    else get(associatedUserObject,'Value') == 1
+    else
+        'no over here'
         set(hObject,'CData',imread('NCSRCclosedpassing.png'));       
     end    
 end
@@ -2894,27 +2898,27 @@ BR1B2_Voltage = min(block.InputPort(20).Data);
 BR2B1_Voltage = min(block.InputPort(21).Data);
 BR2B2_Voltage = min(block.InputPort(22).Data);
 Main_Voltage = min(block.InputPort(23).Data);
-SRC1Unreg_Current = min(block.InputPort(24).Data):
+SRC1Unreg_Current = min(block.InputPort(24).Data);
 SRC1Unreg_Voltage = min(block.InputPort(25).Data);
 SRC1Reg_Current = min(block.InputPort(26).Data);
 SRC1Reg_Voltage = min(block.InputPort(27).Data);
-SRC2Unreg_Current = min(block.InputPort(28).Data):
+SRC2Unreg_Current = min(block.InputPort(28).Data);
 SRC2Unreg_Voltage = min(block.InputPort(29).Data);
 SRC2Reg_Current = min(block.InputPort(30).Data);
 SRC2Reg_Voltage = min(block.InputPort(31).Data);
-SRC3Unreg_Current = min(block.InputPort(32).Data):
+SRC3Unreg_Current = min(block.InputPort(32).Data);
 SRC3Unreg_Voltage = min(block.InputPort(33).Data);
 SRC3Reg_Current = min(block.InputPort(34).Data);
 SRC3Reg_Voltage = min(block.InputPort(35).Data);
-SRC4Unreg_Current = min(block.InputPort(36).Data):
+SRC4Unreg_Current = min(block.InputPort(36).Data);
 SRC4Unreg_Voltage = min(block.InputPort(37).Data);
 SRC4Reg_Current = min(block.InputPort(38).Data);
 SRC4Reg_Voltage = min(block.InputPort(39).Data);
-SRC5Unreg_Current = min(block.InputPort(40).Data):
+SRC5Unreg_Current = min(block.InputPort(40).Data);
 SRC5Unreg_Voltage = min(block.InputPort(41).Data);
 SRC5Reg_Current = min(block.InputPort(42).Data);
 SRC5Reg_Voltage = min(block.InputPort(43).Data);
-SRC6Unreg_Current = min(block.InputPort(44).Data):
+SRC6Unreg_Current = min(block.InputPort(44).Data);
 SRC6Unreg_Voltage = min(block.InputPort(45).Data);
 SRC6Reg_Current = min(block.InputPort(46).Data);
 SRC6Reg_Voltage = min(block.InputPort(47).Data);
@@ -2940,12 +2944,12 @@ BR2B1DIST_User = min(block.InputPort(66).Data);
 BR2B2DIST_User = min(block.InputPort(67).Data);
 TIE1_User = min(block.InputPort(68).Data);
 TIE2_User = min(block.InputPort(69).Data);
-SRC1_User = min(block.InputPort(70).Data;
-SRC2_User = min(block.InputPort(71).Data;
-SRC3_User = min(block.InputPort(72).Data;
-SRC4_User = min(block.InputPort(73).Data;
-SRC5_User = min(block.InputPort(74).Data;
-SRC6_User = min(block.InputPort(75).Data;
+SRC1_User = min(block.InputPort(70).Data);
+SRC2_User = min(block.InputPort(71).Data);
+SRC3_User = min(block.InputPort(72).Data);
+SRC4_User = min(block.InputPort(73).Data);
+SRC5_User = min(block.InputPort(74).Data);
+SRC6_User = min(block.InputPort(75).Data);
 
 
 %update data display fields on GUI
@@ -3058,3 +3062,276 @@ else
 end
 
 
+
+function edit73_Callback(hObject, eventdata, handles)
+% hObject    handle to edit73 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit73 as text
+%        str2double(get(hObject,'String')) returns contents of edit73 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit73_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit73 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in PlottingADD.
+function PlottingADD_Callback(hObject, eventdata, handles)
+% hObject    handle to PlottingADD (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in PlottingREMOVE.
+function PlottingREMOVE_Callback(hObject, eventdata, handles)
+% hObject    handle to PlottingREMOVE (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in PlottingCLEAR.
+function PlottingCLEAR_Callback(hObject, eventdata, handles)
+% hObject    handle to PlottingCLEAR (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on selection change in DisplayLBOX.
+function DisplayLBOX_Callback(hObject, eventdata, handles)
+% hObject    handle to DisplayLBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns DisplayLBOX contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from DisplayLBOX
+
+
+% --- Executes during object creation, after setting all properties.
+function DisplayLBOX_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to DisplayLBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: listbox controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in LogFileCBOX.
+function LogFileCBOX_Callback(hObject, eventdata, handles)
+% hObject    handle to LogFileCBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of LogFileCBOX
+
+
+
+function LogFileEDIT_Callback(hObject, eventdata, handles)
+% hObject    handle to LogFileEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of LogFileEDIT as text
+%        str2double(get(hObject,'String')) returns contents of LogFileEDIT as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function LogFileEDIT_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to LogFileEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in LogFileBROWSE.
+function LogFileBROWSE_Callback(hObject, eventdata, handles)
+% hObject    handle to LogFileBROWSE (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+
+function ConfigureSourceEDIT_Callback(hObject, eventdata, handles)
+% hObject    handle to ConfigureSourceEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of ConfigureSourceEDIT as text
+%        str2double(get(hObject,'String')) returns contents of ConfigureSourceEDIT as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function ConfigureSourceEDIT_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to ConfigureSourceEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in ConfigureSourceBROWSE.
+function ConfigureSourceBROWSE_Callback(hObject, eventdata, handles)
+h = guidata(GUIv2);
+[filename pathname filterindex] = uigetfile('*.xlsx', 'Select a source configuration file');
+
+set(h.ConfigureSourceEDIT,'String',filename);
+
+try
+    [num text raw] = xlsread(filename,'B2:C7');
+catch ME
+    if strcmp(ME.identifier,'MATLAB:xlsread:FileNotFound')
+        errmsg = ['no plan file called ' filename];
+        set(h.status_field,'String',filename);
+    elseif strcmp(ME.identifier,'MATLAB:xlsread:FileFormat')
+        errmsg = [filename 'is not an .xlsx'];
+        set(h.status_field,'String', errmsg);
+    else
+        set(h.status_field,'String','unknown plan file error');
+    end
+    rethrow(ME)
+end
+
+%set the icons in accordance with the file
+for i = 1:6
+    filestr = eval(['text(' num2str(i) ')'])
+    command = ['set(handles.Source' num2str(i) 'IconButton,''Cdata'',imread(''' char(filestr) '''))']
+    eval(command);
+end
+
+%set the connection icons in accordance with the file
+for i = 1:6
+    switch num(i)
+        case 0
+            command = ['set(handles.Source' num2str(i) 'IconButton,''Cdata'',imread(''NoConn.png''))']
+            eval(command);
+        case 1
+            command = ['set(handles.Source' num2str(i) 'IconButton,''Cdata'',imread(''NoConn.png''))']
+            eval(command);
+            set(handles.Bus1AConnButton, 'Cdata', imread('Bus1ConnOccupied'
+        case 2
+            
+        case 3
+            
+        case 4
+            
+        case 5
+           
+    end
+    
+end
+
+
+% --- Executes on button press in ScenarioFileCBOX.
+function ScenarioFileCBOX_Callback(hObject, eventdata, handles)
+% hObject    handle to ScenarioFileCBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of ScenarioFileCBOX
+
+
+
+function ScenarioFileEDIT_Callback(hObject, eventdata, handles)
+% hObject    handle to ScenarioFileEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of ScenarioFileEDIT as text
+%        str2double(get(hObject,'String')) returns contents of ScenarioFileEDIT as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function ScenarioFileEDIT_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to ScenarioFileEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in ScenarioFileBROWSE.
+function ScenarioFileBROWSE_Callback(hObject, eventdata, handles)
+% hObject    handle to ScenarioFileBROWSE (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in RecordScenarioCBOX.
+function RecordScenarioCBOX_Callback(hObject, eventdata, handles)
+% hObject    handle to RecordScenarioCBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of RecordScenarioCBOX
+
+
+
+function ScenarioRecordEDIT_Callback(hObject, eventdata, handles)
+% hObject    handle to ScenarioRecordEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of ScenarioRecordEDIT as text
+%        str2double(get(hObject,'String')) returns contents of ScenarioRecordEDIT as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function ScenarioRecordEDIT_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to ScenarioRecordEDIT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on selection change in AvailableLBOX.
+function AvailableLBOX_Callback(hObject, eventdata, handles)
+% hObject    handle to AvailableLBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns AvailableLBOX contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from AvailableLBOX
+
+
+% --- Executes during object creation, after setting all properties.
+function AvailableLBOX_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to AvailableLBOX (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: listbox controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end

@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<SourceConfig>
+	<source id='1'>
+		<name>NC</name>
+		<node>NC</node>
+	</source>
+	<source id = '2'>
+		<name>NC</name>
+		<node>NC</node>	
+	</source>
+	<source id = '3'>
+		<name>SRCA</name>
+		<node>1</node>
+	</source>
+	<source id = '4'>
+		<name>SRCB</name>
+		<node>2</node>
+	</source>
+	<source id = '5'>
+		<name>CHARGEA</name>
+		<node>3</node>
+	</source>
+	<source id = '6'>
+		<name>DISCHARGEA</name>
+		<node>3</node>
+	</source>
+</SourceConfig>
